@@ -1,0 +1,12 @@
+{
+  "name": "Mini Banking API",
+  "version": "1.0.0",
+  "description": "it is test api for Mini Banking API",
+  "main": "api.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node api.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
