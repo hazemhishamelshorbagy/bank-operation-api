@@ -2,7 +2,9 @@
 
 
 # Bank Operation API v1
+## Server Running
 
+![Server Running](./screenshots/accounts-endpoint.png)
 ## Overview
 
 This project is a simple Node.js HTTP Server built without Express.
