@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accounts | <%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="page-content">
+        <section class="card">
+            <h1>Accounts</h1>
+            <% if (accounts && accounts.length > 0) { %>
+                <ul class="account-list">
+                    <% accounts.forEach(account => { %>
+                        <li><strong>Account ID:</strong> <%= account.id %> | <strong>Name:</strong> <%= account.name %>| <strong>Balance:</strong> <%= account.balance %></li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <p class="empty-state">
+                    <h1>No accounts found</h1>
+                    <p>There are no accounts available.</p>
+                </p>
+            <% } %>
+            <p><a class="button" href="/createaccount">Create a new account</a></p>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

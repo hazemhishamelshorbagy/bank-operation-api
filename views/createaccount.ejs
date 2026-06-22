@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | <%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="page-content">
+        <section class="card">
+            <h1>Create Account</h1>
+            <% if (typeof error !== 'undefined') { %>
+                <p class="form-error"><%= error %></p>
+            <% } %>
+            <form action="/createaccount" method="POST" class="form-stack">
+                <label for="name">Full name</label>
+                <input type="text" id="name" name="name" required>
+                <button type="submit">Create Account</button>
+            </form>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

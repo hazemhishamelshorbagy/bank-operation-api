@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Portal | <%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="page-content">
+      <% if (customers && customers.length > 0) { %>
+        <div class="cards-grid">
+          <% customers.forEach(customer => { %>
+            <section class="card">
+              <h2>Customer <%= customer.id %></h2>
+              <p><strong>Name:</strong> <%= customer.name %></p>
+            </section>
+          <% }) %>
+        </div>
+      <% } else { %>
+        <div class="empty-state">
+            <h1>Customer not found</h1>
+        </div>
+      <% } %>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

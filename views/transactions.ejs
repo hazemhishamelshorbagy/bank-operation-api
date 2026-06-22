@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transactions | <%= title %></title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main class="page-content">
+        <section class="card">
+            <h1>Transactions</h1>
+            <% if (transactions && transactions.length > 0) { %>
+                <ul class="transaction-list">
+                    <% transactions.forEach(transaction => { %>
+                        <li><strong>Transaction ID:</strong> <%= transaction.id %> | <strong>Account ID:</strong> <%= transaction.accountId %> | <strong>Amount:</strong> <%= transaction.amount %> | <strong>Date:</strong> <%= transaction.date %></li>
+                    <% }) %>
+                </ul>
+            <% } else { %>
+                <p class="empty-state">
+                    <h1>No transactions found</h1>
+                    <p>There are no transactions available.</p>
+                </p>
+            <% } %>
+        </section>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

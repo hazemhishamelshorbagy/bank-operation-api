@@ -1,0 +1,13 @@
+<header class="site-header">
+  <div class="site-header__wrapper">
+    <div class="site-brand">
+      <span class="site-brand__logo">BankOps</span>
+      <span class="site-brand__tag"><%= title %></span>
+    </div>
+    <nav class="site-nav">
+      <a href="/" class="<%= title === 'Customer Portal' ? 'active' : '' %>">Home</a>
+      <a href="/accounts" class="<%= title === 'Accounts' ? 'active' : '' %>">Accounts</a>
+      <a href="/transactions" class="<%= title === 'Transactions' ? 'active' : '' %>">Transactions</a>
+    </nav>
+  </div>
+</header>
