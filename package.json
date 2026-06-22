@@ -2,11 +2,14 @@
   "name": "Mini Banking API",
   "version": "1.0.0",
   "description": "it is test api for Mini Banking API",
-  "main": "api.js",
+  "main": "api_node_app.js",
   "scripts": {
     "test": "npm start",
-    "start": "node api.js"
+    "start": "node api_node_app.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
